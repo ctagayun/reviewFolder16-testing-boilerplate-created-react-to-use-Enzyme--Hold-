@@ -1,0 +1,22 @@
+
+Links: 
+  https://enzymejs.github.io/enzyme/
+  
+Notes: 
+   Go to https://www.robinwieruch.de/react-testing-jest-enzyme/
+   
+   In this React testing tutorial, we are using React 16. That's why the Enzyme 
+adapter for React 16 gets installed here. So make sure to check the React 
+version in your application for installing the appropriate adapter. In the next step, 
+we want to set up Enzyme with its adapter in our Jest testing environment. 
+
+1. Enzyme in Jest Setup
+    - npm install --save-dev enzyme
+
+    - npm install --save-dev enzyme-adapter-react-16
+
+2. Enzyme Unit/Integration Testing in React
+     The Enzyme in Jest setup is up and running. Now you can start to test your React 
+   component(s). The following section should show you a couple of basic patterns which 
+   you can apply in your React component tests. If you follow these testing patterns, 
+   you don't have to make a costly mental decision every time when you test a React component.

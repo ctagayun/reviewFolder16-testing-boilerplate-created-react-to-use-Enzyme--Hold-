@@ -1,0 +1,96 @@
+   
+ 1. Go to How to test React Components -  https://www.robinwieruch.de/react-testing-tutorial/
+    Scroll down to React Testing Libraries
+    If you really want to test React components the idiomatic way, you will not get 
+    around Jest. Jest was released by Facebook to test React components and brings the 
+    combined power of Mocha, Chai, Sinon and more. It is a test runner, assertion library, 
+    and offers spies, stubs and mocks as well. Jest can be combined with Enzyme or 
+    React Testing Library to test your React components in an even more powerful way
+
+  2. Scroll down to JEST + REACT TESTING LIBRARY  - https://www.robinwieruch.de/react-testing-library/
+     and study the following:
+
+     (A) Scroll to Jest Testing in React Setup
+
+          Click  How to test React components with React Testing Library (https://www.robinwieruch.de/react-testing-library/)
+          After reading click: 
+          Continue Reading: Jest with React Testing Library (https://www.robinwieruch.de/react-testing-library/)
+ 
+          - Before implementing the test setup and writing the first React component tests, you will 
+          need a simple React application which can be tested in the first place. Start with 
+          the src/index.js file copy the code (see index.js)
+
+          - create App.js and copy code. See (App.js)
+
+          - In order to get our tests up and running, set up Jest by installing it on the command line 
+          as development dependencies:
+              npm install --save-dev jest --force 
+                 or  
+              npm install --save-dev jest --legacy-peer-deps
+ 
+          - In your package.json file, create a new npm script which runs Jest:
+
+          - Next, we can define this optional configuration for Jest in a configuration file. 
+          Create it on the command line: touch jest.config.json and add the following pattern:
+               {
+                "testRegex": "((\\.|/*.)(spec))\\.js?$"
+              }
+
+          - next  create the test file on the command line:
+                touch src/App.spec.js
+            and add this test suite: 
+              describe('My Test Suite', () => {
+                  it('My Test Case', () => {
+                     expect(true).toEqual(true);
+                  });
+                  });
+
+          - add another npm script in package.json:
+              "test:watch": "npm run test -- --watchAll"
+
+          - do  NPM TEST to execute your test suites with your test cases. 
+
+     (B) Jest Snapshot Testing in React
+           -  npm install --save-dev react-test-renderer  
+
+           - implement your snapshot test. Add code in App.spec.js.
+            
+           - Now run your Jest tests in watch mode again: npm run test:watchAll. 
+
+           - add another Snapshot test for your App component: 
+
+     (C)  Jest Unit/Integration Testing in React
+            - Add  the  test suite for "Reducer Hook"   to App.Spec.js      
+
+            - npm run test -- --watchAll 
+
+     (D) Exercises:
+         Explore more Jest Features and how to use them for Snapshot Testing (TODO)
+           - https://jestjs.io/docs/tutorial-react
+
+      Summary: 
+            Jest gives you (almost) everything you need to test your React components. 
+         You can run all your tests from the command line, give it additional configuration, 
+         and define test suites and test cases in your test files. 
+         
+           Snapshot Tests give you a lightweight way to test your React components by just 
+         diffing the rendered output to the previous output. Also you have seen how Jest 
+         can be used for testing only JavaScript functions, so it's not strictly bound to 
+         React testing.
+
+           However, TESTING THE DOM OF A REACT COMPONENT WITH JEST IS MORE DIFFICULT. 
+         That's why there exist other third-party libraries such as React Testing Library 
+         or Enzyme to make React component unit testing possible for you.  
+
+
+       (5) Testing the DOM of a React component   (Study this later)
+           - How to test React components with Jest & Enzyme - https://www.robinwieruch.de/react-testing-jest-enzyme/
+           - How to shallow render Jest Snapshot Tests - https://www.robinwieruch.de/jest-snapshot-shallow-render/
+           - How to Jest Snapshot Test the Difference - https://www.robinwieruch.de/jest-snapshot-test-difference/
+           - How to test React-Redux connected Components https://www.robinwieruch.de/react-connected-component-test/
+
+  
+
+
+
+
